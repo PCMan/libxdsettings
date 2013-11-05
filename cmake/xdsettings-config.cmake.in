@@ -1,0 +1,31 @@
+# - Find the xdsettings include and library dirs and define a some macros
+#
+# The module defines the following variables
+#
+#  XDSETTINGS_FOUND         - Set to TRUE if all of the above has been found
+#
+#  XDSETTINGS_INCLUDE_DIR   - The lxqt include directory
+#
+#  XDSETTINGS_INCLUDE_DIRS  - The lxqt and the Qt include directory, for use with INCLUDE_DIRECTORIES()
+#
+#  XDSETTINGS_LIBRARIES     - The libraries needed to use lxqt
+#
+#  XDSETTINGS_USE_FILE       - The variable XDSETTINGS_USE_FILE is set which is the path to a CMake file that
+#                        can be included to compile lxqt applications and libraries. It sets up
+#                        the compilation environment for include directories and populates a
+#                        XDSETTINGS_LIBRARIES variable.
+
+set(XDSETTINGS_MAJOR_VERSION @MAJOR_VERSION@)
+set(XDSETTINGS_MINOR_VERSION @MINOR_VERSION@)
+set(XDSETTINGS_PATCH_VERSION @PATCH_VERSION@)
+set(XDSETTINGS_VERSION       @XDSETTINGS_VERSION@)
+
+set(XDSETTINGS_INCLUDE_DIR   @XDSETTINGS_INCLUDE_DIR@)
+set(XDSETTINGS_LIBRARY       xdsettings)
+
+set(XDSETTINGS_LIBRARIES     ${XDSETTINGS_LIBRARY} )
+set(XDSETTINGS_INCLUDE_DIRS  ${XDSETTINGS_INCLUDE_DIR} )
+set(XDSETTINGS_USE_FILE      ${CMAKE_CURRENT_LIST_DIR}/xdsettings_use.cmake)
+set(XDSETTINGS_FOUND         1)
+
+mark_as_advanced(XDSETTINGS_LIBRARY XDSETTINGS_INCLUDE_DIR)
