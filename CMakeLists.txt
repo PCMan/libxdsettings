@@ -71,6 +71,12 @@ create_pkgconfig_file(xdsettings
     ${XDSETTINGS_VERSION}
 )
 
+# install headers
+set(XDSETTINGS_PUBLIC_HDRS
+	desktopsettings.h
+)
+install(FILES ${XDSETTINGS_PUBLIC_HDRS} DESTINATION include/xdsettings)
+
 # file soname
 set_target_properties(xdsettings PROPERTIES
   VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION}
