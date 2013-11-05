@@ -60,7 +60,7 @@ configure_file(
     @ONLY
 )
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/xdsettings-config.cmake DESTINATION ${CMAKE_INSTALL_DATADIR}/cmake/xdsettings)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/cmake/xdsettings_use.cmake DESTINATION ${CMAKE_INSTALL_DATADIR}/cmake/xdsettings)
+install(FILES cmake/xdsettings_use.cmake DESTINATION ${CMAKE_INSTALL_DATADIR}/cmake/xdsettings)
 
 # pkgconfig file
 include(create_pkgconfig_file)
